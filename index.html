@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موسیو اپ | دنیای دیجیتال</title>
+    <meta name="description" content="موسیو اپ - طراحی سایت، برنامه نویسی، ربات تلگرام، اپل آیدی و خدمات دیجیتال">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <canvas id="matrixCanvas"></canvas>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#home" class="brand">
+            <img src="images/logo.png" alt="Mosiyo App" class="nav-logo">
+            <div class="brand-text"><span>موسیو</span> اپ</div>
+        </a>
+
+        <div class="menu" id="menu">
+            <a href="#home">خانه</a>
+            <a href="#services">خدمات</a>
+            <a href="#about">درباره ما</a>
+            <a href="#contact">تماس با ما</a>
+        </div>
+
+        <button class="login-btn" onclick="openLogin()">ورود / ثبت‌نام</button>
+        <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+    </nav>
+
+    <main id="home">
+
+        <!-- Hero -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="pulse"></span>
+                    آینده دیجیتال از اینجا شروع میشه
+                </div>
+
+                <h1>دنیای دیجیتال<br><span>یک قدم جلوتر</span></h1>
+
+                <p>
+                    موسیو اپ، جایی برای ساختن سایت‌های حرفه‌ای،
+                    ربات‌های هوشمند، خدمات اپل و راهکارهای دیجیتال مدرن.
+                </p>
+
+                <div class="hero-buttons">
+                    <button class="primary-btn" onclick="openOrder()">شروع یک پروژه 🚀</button>
+                    <button class="secondary-btn" onclick="goToServices()">مشاهده خدمات</button>
+                </div>
+
+                <div class="hero-stats">
+                    <div>
+                        <strong>100%</strong>
+                        <span>اختصاصی</span>
+                    </div>
+                    <div>
+                        <strong>24/7</strong>
+                        <span>پشتیبانی</span>
+                    </div>
+                    <div>
+                        <strong>⚡</strong>
+                        <span>سریع</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section class="services" id="services">
+            <div class="section-heading">
+                <span>خدمات موسیو</span>
+                <h2>هر چیزی برای رشد دیجیتال</h2>
+                <p>از ایده تا اجرا، کنارت هستیم.</p>
+            </div>
+
+            <h3 class="services-subtitle">خدمات تخصصی</h3>
+            <div class="service-grid">
+                <div class="glass-card service-clickable" onclick="openOrder('طراحی سایت')">
+                    <div class="card-number">01</div>
+                    <div class="service-icon">🌐</div>
+                    <h3>طراحی سایت</h3>
+                    <p>طراحی سایت‌های مدرن، سریع، واکنش‌گرا و حرفه‌ای.</p>
+                    <div class="service-action"><span>←</span> سفارش طراحی سایت</div>
+                </div>
+
+                <div class="glass-card service-clickable" onclick="openOrder('ربات تلگرام')">
+                    <div class="card-number">02</div>
+                    <div class="service-icon">🤖</div>
+                    <h3>ربات تلگرام</h3>
+                    <p>ربات‌های فروشگاهی، خدماتی و اتوماسیون.</p>
+                    <div class="service-action"><span>←</span> سفارش ربات</div>
+                </div>
+
+                <div class="glass-card service-clickable" onclick="openOrder('برنامه‌نویسی')">
+                    <div class="card-number">03</div>
+                    <div class="service-icon">💻</div>
+                    <h3>برنامه‌نویسی</h3>
+                    <p>ساخت نرم‌افزار و سیستم‌های اختصاصی متناسب با نیاز شما.</p>
+                    <div class="service-action"><span>←</span> ثبت پروژه</div>
+                </div>
+
+                <div class="glass-card service-clickable" onclick="openOrder('طراحی گرافیک')">
+                    <div class="card-number">04</div>
+                    <div class="service-icon">🎨</div>
+                    <h3>طراحی گرافیک</h3>
+                    <p>طراحی لوگو، بنر، محتوای شبکه‌های اجتماعی و برندینگ.</p>
+                    <div class="service-action"><span>←</span> سفارش طراحی</div>
+                </div>
+            </div>
+
+            <h3 class="services-subtitle" style="margin-top: 60px;">خدمات متفرقه و سریع</h3>
+            <div class="service-grid">
+                <div class="glass-card service-clickable" onclick="openOrder('ساخت اپل آیدی')">
+                    <div class="card-number">05</div>
+                    <div class="service-icon">🍎</div>
+                    <h3>ساخت اپل آیدی</h3>
+                    <p>ساخت اپل آیدی معتبر با گارانتی و تحویل سریع.</p>
+                    <div class="service-action"><span>←</span> سفارش ساخت</div>
+                </div>
+
+                <div class="glass-card service-clickable" onclick="openOrder('فعال‌سازی اپل آیدی')">
+                    <div class="card-number">06</div>
+                    <div class="service-icon">🔓</div>
+                    <h3>فعال‌سازی اپل آیدی</h3>
+                    <p>آنلاک و فعال‌سازی اپل آیدی‌های قفل‌شده.</p>
+                    <div class="service-action"><span>←</span> فعال‌سازی</div>
+                </div>
+
+                <div class="glass-card service-clickable" onclick="openOrder('عیب‌یابی سیستم')">
+                    <div class="card-number">07</div>
+                    <div class="service-icon">🛠️</div>
+                    <h3>عیب‌یابی سیستم</h3>
+                    <p>بررسی و رفع مشکل ویندوز، مک و اندروید.</p>
+                    <div class="service-action"><span>←</span> درخواست بررسی</div>
+                </div>
+
+                <div class="glass-card service-clickable" onclick="openOrder('فروش فایل و آموزش')">
+                    <div class="card-number">08</div>
+                    <div class="service-icon">📁</div>
+                    <h3>فروش فایل و آموزش</h3>
+                    <p>فایل‌های آماده، قالب، اسکریپت و پکیج‌های آموزشی.</p>
+                    <div class="service-action"><span>←</span> مشاهده محصولات</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="about" id="about">
+            <div class="about-content">
+                <div class="section-tag">درباره موسیو اپ</div>
+                <h2>تکنولوژی رو <span>ساده‌تر</span> می‌کنیم.</h2>
+                <p>
+                    ما در موسیو اپ تلاش می‌کنیم تکنولوژی و خدمات دیجیتال را
+                    ساده، سریع و قابل دسترس کنیم.
+                </p>
+
+                <div class="about-points">
+                    <div><span>✓</span> طراحی مدرن</div>
+                    <div><span>✓</span> اجرای اختصاصی</div>
+                    <div><span>✓</span> پشتیبانی</div>
+                </div>
+            </div>
+
+            <div class="about-object energy-core-wrap">
+                <div class="energy-core" id="energyCore">
+                    <div class="core-glow"></div>
+                    <div class="core-center"><span>M</span></div>
+                    <div class="energy-ring ring-1"></div>
+                    <div class="energy-ring ring-2"></div>
+                    <div class="energy-ring ring-3"></div>
+                    <div class="energy-particles">
+                        <i></i><i></i><i></i><i></i>
+                        <i></i><i></i><i></i><i></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="contact" id="contact">
+            <div class="contact-box">
+                <span>آماده‌ای شروع کنیم؟</span>
+                <h2>ایده‌ات رو به واقعیت تبدیل کنیم 🚀</h2>
+                <p>پروژه‌ات رو برای ما ارسال کن.</p>
+                <button class="primary-btn" onclick="openOrder()">ثبت سفارش</button>
+            </div>
+        </section>
+
+        <!-- Dashboard -->
+        <section class="dashboard" id="dashboard">
+            <div class="dashboard-header">
+                <div>
+                    <span class="section-tag">پنل کاربری</span>
+                    <h2>سلام، <span id="userName">کاربر موسیو</span> 👋</h2>
+                    <p>به پنل کاربری موسیو اپ خوش آمدید.</p>
+                </div>
+                <button class="logout-btn" onclick="logout()">خروج 🚪</button>
+            </div>
+
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <span>📋</span>
+                    <strong id="orderCount">0</strong>
+                    <p>سفارش‌های من</p>
+                </div>
+                <div class="stat-card">
+                    <span>⏳</span>
+                    <strong id="pendingCount">0</strong>
+                    <p>در انتظار بررسی</p>
+                </div>
+                <div class="stat-card">
+                    <span>🔧</span>
+                    <strong id="workingCount">0</strong>
+                    <p>در حال انجام</p>
+                </div>
+                <div class="stat-card">
+                    <span>✅</span>
+                    <strong id="completedCount">0</strong>
+                    <p>تکمیل شده</p>
+                </div>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="dashboard-card">
+                    <div class="dashboard-title">
+                        <div>
+                            <h3>آخرین سفارش‌ها</h3>
+                            <p>وضعیت پروژه‌های شما</p>
+                        </div>
+                        <button class="small-btn" onclick="openOrder()">+ سفارش جدید</button>
+                    </div>
+                    <div id="ordersList" class="orders-list"></div>
+                </div>
+
+                <div class="dashboard-card profile-card">
+                    <h3>اطلاعات حساب</h3>
+
+                    <div class="profile-item">
+                        <span>👤 نام</span>
+                        <strong id="profileName">کاربر موسیو</strong>
+                    </div>
+                    <div class="profile-item">
+                        <span>📱 موبایل</span>
+                        <strong id="profilePhone">-</strong>
+                    </div>
+                    <div class="profile-item">
+                        <span>⭐ وضعیت</span>
+                        <strong class="verified">فعال</strong>
+                    </div>
+
+                    <button class="secondary-btn full-btn" onclick="editProfile()">ویرایش اطلاعات</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Order Modal -->
+    <div class="order-modal" id="orderModal">
+        <div class="order-modal-box">
+            <div class="order-header">
+                <div>
+                    <span class="order-kicker">MOSIYO APP</span>
+                    <h2>ثبت پروژه جدید</h2>
+                    <p>چند قدم ساده تا شروع پروژه شما 🚀</p>
+                </div>
+                <button type="button" class="order-close" onclick="closeOrder()" aria-label="بستن">×</button>
+            </div>
+
+            <div class="order-progress">
+                <div class="progress-line"><span id="orderProgressLine"></span></div>
+                <div class="progress-step active" data-step="1"><span>1</span><small>نوع پروژه</small></div>
+                <div class="progress-step" data-step="2"><span>2</span><small>جزئیات</small></div>
+                <div class="progress-step" data-step="3"><span>3</span><small>اطلاعات</small></div>
+                <div class="progress-step" data-step="4"><span>4</span><small>تأیید</small></div>
+            </div>
+
+            <form id="orderForm" autocomplete="off">
+                <!-- Step 1 -->
+                <div class="order-step active" data-step-content="1">
+                    <div class="step-title">
+                        <span class="step-icon">🚀</span>
+                        <div>
+                            <h3>چه پروژه‌ای می‌خواهید؟</h3>
+                            <p>نوع خدمات مورد نیازتان را انتخاب کنید.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-options">
+                        <button type="button" class="service-option" data-service="طراحی سایت">
+                            <span class="service-option-icon">🌐</span>
+                            <span><strong>طراحی سایت</strong><small>سایت شرکتی، فروشگاهی و شخصی</small></span>
+                            <i>←</i>
+                        </button>
+                        <button type="button" class="service-option" data-service="ربات تلگرام">
+                            <span class="service-option-icon">🤖</span>
+                            <span><strong>ربات تلگرام</strong><small>فروش، پشتیبانی و اتوماسیون</small></span>
+                            <i>←</i>
+                        </button>
+                        <button type="button" class="service-option" data-service="برنامه‌نویسی">
+                            <span class="service-option-icon">💻</span>
+                            <span><strong>برنامه‌نویسی</strong><small>نرم‌افزار و سیستم اختصاصی</small></span>
+                            <i>←</i>
+                        </button>
+                        <button type="button" class="service-option" data-service="طراحی گرافیک">
+                            <span class="service-option-icon">🎨</span>
+                            <span><strong>طراحی گرافیک</strong><small>لوگو، بنر و برندینگ</small></span>
+                            <i>←</i>
+                        </button>
+                        <button type="button" class="service-option" data-service="ساخت اپل آیدی">
+                            <span class="service-option-icon">🍎</span>
+                            <span><strong>ساخت اپل آیدی</strong><small>اپل آیدی معتبر با گارانتی</small></span>
+                            <i>←</i>
+                        </button>
+                        <button type="button" class="service-option" data-service="فعال‌سازی اپل آیدی">
+                            <span class="service-option-icon">🔓</span>
+                            <span><strong>فعال‌سازی اپل آیدی</strong><small>آنلاک و رفع قفل</small></span>
+                            <i>←</i>
+                        </button>
+                        <button type="button" class="service-option" data-service="عیب‌یابی سیستم">
+                            <span class="service-option-icon">🛠️</span>
+                            <span><strong>عیب‌یابی سیستم</strong><small>ویندوز، مک و اندروید</small></span>
+                            <i>←</i>
+                        </button>
+                        <button type="button" class="service-option" data-service="فروش فایل و آموزش">
+                            <span class="service-option-icon">📁</span>
+                            <span><strong>فروش فایل و آموزش</strong><small>فایل آماده و پکیج آموزشی</small></span>
+                            <i>←</i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="order-step" data-step-content="2">
+                    <div class="step-title">
+                        <span class="step-icon">📝</span>
+                        <div>
+                            <h3>کمی درباره پروژه بگویید</h3>
+                            <p>اطلاعات بیشتر کمک می‌کند بهتر راهنمایی‌تان کنیم.</p>
+                        </div>
+                    </div>
+
+                    <div id="dynamicQuestions" class="dynamic-questions"></div>
+
+                    <div class="form-group">
+                        <label>توضیحات پروژه <span>*</span></label>
+                        <textarea id="orderDescription" placeholder="توضیحات کامل پروژه را بنویسید..." minlength="10" required></textarea>
+                        <div class="input-hint">حداقل ۱۰ کاراکتر</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>بودجه تقریبی</label>
+                        <div class="budget-options">
+                            <button type="button" data-budget="زیر ۵ میلیون تومان">زیر ۵ میلیون</button>
+                            <button type="button" data-budget="۵ تا ۱۵ میلیون تومان">۵ تا ۱۵ میلیون</button>
+                            <button type="button" data-budget="۱۵ تا ۴۰ میلیون تومان">۱۵ تا ۴۰ میلیون</button>
+                            <button type="button" data-budget="بالای ۴۰ میلیون تومان">بالای ۴۰ میلیون</button>
+                            <button type="button" data-budget="هنوز مشخص نیست">نمی‌دانم</button>
+                        </div>
+                    </div>
+
+                    <div class="step-actions">
+                        <button type="button" class="order-back" onclick="previousOrderStep()">→ مرحله قبل</button>
+                        <button type="button" class="order-next" onclick="nextOrderStep()">ادامه ←</button>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="order-step" data-step-content="3">
+                    <div class="step-title">
+                        <span class="step-icon">👤</span>
+                        <div>
+                            <h3>اطلاعات تماس</h3>
+                            <p>برای پیگیری پروژه با شما تماس می‌گیریم.</p>
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>نام و نام خانوادگی <span>*</span></label>
+                            <input type="text" id="orderName" placeholder="مثلاً امیرحسین سلیمانی" required>
+                        </div>
+                        <div class="form-group">
+                            <label>شماره موبایل <span>*</span></label>
+                            <input type="tel" id="orderPhone" placeholder="09123456789" maxlength="11" inputmode="numeric" required>
+                        </div>
+                    </div>
+
+                    <div class="contact-note">
+                        <span>🔒</span>
+                        <p>اطلاعات شما فقط برای ارتباط درباره پروژه استفاده می‌شود.</p>
+                    </div>
+
+                    <div class="step-actions">
+                        <button type="button" class="order-back" onclick="previousOrderStep()">→ مرحله قبل</button>
+                        <button type="button" class="order-next" onclick="nextOrderStep()">مشاهده خلاصه ←</button>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="order-step" data-step-content="4">
+                    <div class="step-title">
+                        <span class="step-icon">✅</span>
+                        <div>
+                            <h3>بررسی نهایی</h3>
+                            <p>اطلاعات سفارش را بررسی کنید.</p>
+                        </div>
+                    </div>
+
+                    <div id="orderSummary" class="order-summary"></div>
+
+                    <div class="final-note">
+                        <span>🚀</span>
+                        <p>پس از ثبت سفارش، درخواست شما بررسی می‌شود و برای هماهنگی با شما تماس خواهیم گرفت.</p>
+                    </div>
+
+                    <div class="step-actions">
+                        <button type="button" class="order-back" onclick="previousOrderStep()">→ ویرایش</button>
+                        <button type="submit" class="order-submit">ثبت نهایی سفارش 🚀</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-box">
+            <button class="close" onclick="closeLogin()">×</button>
+
+            <div id="phoneStep">
+                <div class="modal-icon">🔐</div>
+                <h2>ورود به موسیو اپ</h2>
+                <p>شماره موبایل خود را وارد کنید.</p>
+                <form id="loginForm">
+                    <input type="tel" id="phoneNumber" placeholder="09123456789" maxlength="11" required>
+                    <button type="submit" class="primary-btn">دریافت کد تأیید</button>
+                </form>
+            </div>
+
+            <div id="codeStep" style="display:none;">
+                <div class="modal-icon">📱</div>
+                <h2>تأیید شماره</h2>
+                <p>کد ۶ رقمی را وارد کنید.</p>
+                <form id="codeForm">
+                    <input type="text" id="verificationCode" placeholder="123456" maxlength="6" required>
+                    <button type="submit" class="primary-btn">تأیید و ورود 🚀</button>
+                </form>
+                <button class="secondary-btn full-btn" onclick="backToPhone()">تغییر شماره</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer (بدون لوگو) -->
+    <footer>
+        <div class="footer-brand">
+            <strong>موسیو اپ</strong>
+        </div>
+
+        <div class="social-links">
+            <a href="https://instagram.com/mosiyoapp" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://t.me/mosiyoapp" target="_blank" rel="noopener">Telegram</a>
+            <a href="https://t.me/mosiyoappbot" target="_blank" rel="noopener">Bot</a>
+            <a href="https://t.me/mosiyo_support" target="_blank" rel="noopener">Support</a>
+        </div>
+
+        <div class="footer-contact">📞 09120573615</div>
+        <p>© 2026 Mosiyo App</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
